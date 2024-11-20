@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "author": "Ansh Kumar <anshkumar9686@gmail.com>",
+  "license": "MIT",
+  "description": "",
+  "repository": "https://github.com/ansh3108/Solidity-HardHat.git"
 }
