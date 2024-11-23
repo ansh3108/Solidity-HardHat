@@ -1,8 +1,13 @@
 // imports
-
+const { ethers } = require( "hardhat" );
 
 // async function 
-async function main(params) { }
+async function main() { 
+    const SimpleStorageFactory = await ethers.getContractFactory(
+        "SimpleStorage"
+    )
+    console.log("Deploying Contract...")
+}
 
 // main
 main()
