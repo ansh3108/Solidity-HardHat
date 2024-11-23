@@ -12,7 +12,7 @@ async function verify(contractAddress, args) {
     console.log("Verifying Contract");
     try{
         await run("verify:verify", {
-            addres: contractAddress,
+            address: contractAddress,
             constructorArguments: args,
         })
     } catch(e) {
