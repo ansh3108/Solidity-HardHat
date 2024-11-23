@@ -8,7 +8,7 @@ async function main() {
     console.log(`Deployed contract to: ${simpleStorage.address}`);
 
     const currentValue = await simpleStorage.retrieve();
-    console.log(`Current value is: ${currentValue}`)
+    console.log(`Current value is: ${currentValue}`);
     
     const transactionResponse=await simpleStorage.store(7);
     await transactionResponse.wait(1);
