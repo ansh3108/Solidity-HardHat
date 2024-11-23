@@ -6,6 +6,14 @@ async function main() {
     const simpleStorage = await SimpleStorageFactory.deploy();
     await simpleStorage.deployed();
     console.log(`Deployed contract to: ${simpleStorage.address}`);
+
+    const currentValue = await simpleStorage.retrieve();
+    console.log(`Current value is: ${currentValue}`)
+    
+    const transactionResponse=await simpleStorage.store(7)
+    await transactionResponse.wait(1)
+    const updatedValue=await simpleStorage.retrieve()
+    console.log(`Updated Value is ${updatedValue}`)
 }
 
 async function verify(contractAddress, args) {
