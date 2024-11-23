@@ -8,6 +8,10 @@ async function main() {
     console.log(`Deployed contract to: ${simpleStorage.address}`);
 }
 
+async function verify(contractAddress, args) {
+    
+}
+
 main()
     .then(() => process.exit(0))
     .catch((error) => {
