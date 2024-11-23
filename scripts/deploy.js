@@ -10,7 +10,18 @@ async function main() {
 
 async function verify(contractAddress, args) {
     console.log("Verifying Contract");
-    await run("Verify")
+    try{
+        await run("verify:verify", {
+            addres: contractAddress,
+            constructorArguments: args,
+        })
+    } catch(e) {
+        if(e.message.toLowerCase().includes("already verified")){
+            console.log("Already Verified")
+        } else {
+            console.log(e)
+        }
+    }
 }
 
 main()
