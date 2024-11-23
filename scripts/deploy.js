@@ -1,4 +1,4 @@
-const { ethers } = require("hardhat");
+const { ethers, run } = require("hardhat");
 
 async function main() {
     const SimpleStorageFactory = await ethers.getContractFactory("SimpleStorage");
@@ -9,7 +9,8 @@ async function main() {
 }
 
 async function verify(contractAddress, args) {
-    
+    console.log("Verifying Contract");
+    await run("Verify")
 }
 
 main()
